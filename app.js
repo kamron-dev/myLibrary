@@ -11,11 +11,18 @@ function Book(title, author, numPages, readOrNot) {
 }
 
 function addBookToLibrary(book) {
-  const newBook = new Book(book);
-  myLibrary.push(newBook);
+  // const newBook = new Book(book);
+  myLibrary.push(book);
 }
 
-const stalker = new Book("Stalker", "Tarkovsky", 345, "not read yet")
+function createNewBook() {
+  const newBook = new Book(`${bookNameInput.value}, ${authorNameInput.value}, ${numPagesInput.value}, ${readOrNot.value}`);
+  return newBook;
+}
+
+
+
+const stalker = new Book("Stalker", "Tarkovsky", 345, "not read yet");
 
 
 
@@ -23,13 +30,25 @@ const stalker = new Book("Stalker", "Tarkovsky", 345, "not read yet")
 myLibrary.push(stalker);
 
 
-
+// Initializing user input variables 
 const submitButton = document.querySelector("#submitButton");
-const textInput = document.querySelector("#newBookInput");
+const bookNameInput = document.querySelector("#bookName");
+const authorNameInput = document.querySelector("#authorName");
+const numPagesInput = document.querySelector("#numPages");
+const readOrNot = document.querySelector("#readOrNot");
+
+
+// submitButton.addEventListener("click", () => {
+//   addBookToLibrary(textInput.value)
+// });
+
+
 
 submitButton.addEventListener("click", () => {
-  addBookToLibrary(textInput.value)
-});
+  const newBook = createNewBook();
+  addBookToLibrary(newBook);
+  
+})
 
 
 
