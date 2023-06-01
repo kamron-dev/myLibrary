@@ -23,11 +23,11 @@ function createNewBook() {
 
 
 const stalker = new Book("Stalker", "Tarkovsky", 345, "not read yet");
+const stalker2 = new Book("Stalker 2", "Tarkovsky", 422, "not read yet");
+const survived = new Book("Survived", "Sam Sayonara Simon", 300, "read");
 
+myLibrary.push(stalker, stalker2, survived);
 
-
-
-myLibrary.push(stalker);
 
 
 // Initializing user input variables 
@@ -36,6 +36,10 @@ const bookNameInput = document.querySelector("#bookName");
 const authorNameInput = document.querySelector("#authorName");
 const numPagesInput = document.querySelector("#numPages");
 const readOrNot = document.querySelector("#readOrNot");
+
+// Initializing display variable
+
+const display = document.querySelector("#bookDisplay");
 
 
 // submitButton.addEventListener("click", () => {

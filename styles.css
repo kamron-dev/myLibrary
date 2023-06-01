@@ -1,8 +1,27 @@
+body {
+    box-sizing: border-box;
+}
 #newBookInputDiv {
     width: 45vw;
-    height: 25vh;
+    height: 10vh;
     border: 2px solid red;
     position: absolute;
     left: 345px;
 
+}
+
+#booksDisplay {
+    width: 90vw;
+    height: 70vh;
+    border: 2px solid blue;
+    position: absolute;
+    top: 95px;
+    left: 55px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    grid-auto-flow: row;
+}
+
+.bookCard {
+    border: 2px solid pink;
 }
