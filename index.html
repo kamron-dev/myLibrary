@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="newBookInputDiv">
+        <label for="bookName">Name of the book:</label>
+        <input type="text" name="bookName" id="bookName">
+        <label for="authorName">Author:</label>
+        <input type="text" name="authorName" id="authorName">
+        <label for="numPages">Number of pages:</label>
+        <input type="tel" name="numPages" id="numPages">
+        <label for="readOrNot">Have you read it yet?</label>
+        <select name="bookState" id="readOrNot">
+            <option value="read">Yes</option>
+            <option value="not read yet">No</option>
+        </select>
+        <button type="submit" id="submitButton">Add book to the library!</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
