@@ -1,5 +1,16 @@
 const myLibrary = [];
 
+// Initializing user input variables 
+const submitButton = document.querySelector("#submitButton");
+const bookNameInput = document.querySelector("#bookName");
+const authorNameInput = document.querySelector("#authorName");
+const numPagesInput = document.querySelector("#numPages");
+const readOrNot = document.querySelector("#readOrNot");
+
+// Initializing display variable
+
+const display = document.querySelector("#booksDisplay");
+
 function Book(title, author, numPages, readOrNot) {
   this.title = title;
   this.author = author;
@@ -20,6 +31,19 @@ function createNewBook() {
   return newBook;
 }
 
+function displayMyLibrary() {
+  myLibrary.forEach(book => {
+    let newItemDiv = document.createElement("div");
+    let bookInfo = book.info();
+    newItemDiv.classList.add("bookCard");
+    newItemDiv.innerHTML = bookInfo;
+    display.appendChild(newItemDiv);
+
+  })
+
+  
+}
+
 
 
 const stalker = new Book("Stalker", "Tarkovsky", 345, "not read yet");
@@ -28,18 +52,7 @@ const survived = new Book("Survived", "Sam Sayonara Simon", 300, "read");
 
 myLibrary.push(stalker, stalker2, survived);
 
-
-
-// Initializing user input variables 
-const submitButton = document.querySelector("#submitButton");
-const bookNameInput = document.querySelector("#bookName");
-const authorNameInput = document.querySelector("#authorName");
-const numPagesInput = document.querySelector("#numPages");
-const readOrNot = document.querySelector("#readOrNot");
-
-// Initializing display variable
-
-const display = document.querySelector("#bookDisplay");
+displayMyLibrary();
 
 
 // submitButton.addEventListener("click", () => {
