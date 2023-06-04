@@ -22,14 +22,9 @@ function Book(title, author, numPages, readOrNot) {
 }
 
 function addBookToLibrary(book) {
-  // const newBook = new Book(book);
   myLibrary.push(book);
 }
 
-// function createNewBook() {
-//   const newBook = new Book(`${bookNameInput.value}, ${authorNameInput.value}, ${numPagesInput.value}, ${readOrNot.value}`);
-//   return newBook;
-// }
 
 function displayMyLibrary() {
   myLibrary.forEach(book => {
@@ -43,6 +38,16 @@ function displayMyLibrary() {
   
 }
 
+submitButton.addEventListener("click", () => {
+  let newBook = new Book(bookNameInput.value, authorNameInput.value, Number(numPagesInput.value), readOrNot.value);
+  addBookToLibrary(newBook);
+  console.table(myLibrary);
+  display.innerHTML = null;
+  displayMyLibrary()
+  
+  
+})
+
 
 
 const stalker = new Book("Stalker", "Tarkovsky", 345, "not read yet");
@@ -55,23 +60,7 @@ myLibrary.push(stalker, stalker2, survived, survived2);
 displayMyLibrary();
 
 
-// submitButton.addEventListener("click", () => {
-//   addBookToLibrary(textInput.value)
-// });
 
 
-
-// submitButton.addEventListener("click", () => {
-//   const newBook = createNewBook();
-//   addBookToLibrary(newBook);
-  
-// })
-
-submitButton.addEventListener("click", () => {
-  let newBook = new Book(bookNameInput.value, authorNameInput.value, Number(numPagesInput.value), readOrNot.value);
-  addBookToLibrary(newBook);
-  console.table(myLibrary);
-  
-})
 
 
