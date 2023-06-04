@@ -26,17 +26,16 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
-function createNewBook() {
-  const newBook = new Book(`${bookNameInput.value}, ${authorNameInput.value}, ${numPagesInput.value}, ${readOrNot.value}`);
-  return newBook;
-}
+// function createNewBook() {
+//   const newBook = new Book(`${bookNameInput.value}, ${authorNameInput.value}, ${numPagesInput.value}, ${readOrNot.value}`);
+//   return newBook;
+// }
 
 function displayMyLibrary() {
   myLibrary.forEach(book => {
     let newItemDiv = document.createElement("div");
-    let bookInfo = book.info();
     newItemDiv.classList.add("bookCard");
-    newItemDiv.innerHTML = bookInfo;
+    newItemDiv.innerHTML = book.info();
     display.appendChild(newItemDiv);
 
   })
@@ -49,8 +48,9 @@ function displayMyLibrary() {
 const stalker = new Book("Stalker", "Tarkovsky", 345, "not read yet");
 const stalker2 = new Book("Stalker 2", "Tarkovsky", 422, "not read yet");
 const survived = new Book("Survived", "Sam Sayonara Simon", 300, "read");
+const survived2 = new Book("Survived2", "Jon Jones", 440, "read");
 
-myLibrary.push(stalker, stalker2, survived);
+myLibrary.push(stalker, stalker2, survived, survived2);
 
 displayMyLibrary();
 
@@ -61,12 +61,17 @@ displayMyLibrary();
 
 
 
+// submitButton.addEventListener("click", () => {
+//   const newBook = createNewBook();
+//   addBookToLibrary(newBook);
+  
+// })
+
 submitButton.addEventListener("click", () => {
-  const newBook = createNewBook();
+  let newBook = new Book(bookNameInput.value, authorNameInput.value, Number(numPagesInput.value), readOrNot.value);
   addBookToLibrary(newBook);
+  console.table(myLibrary);
   
 })
-
-
 
 
