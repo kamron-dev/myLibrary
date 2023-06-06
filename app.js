@@ -62,6 +62,10 @@ submitButton.addEventListener("click", () => {
   // console.table(myLibrary);
   display.innerHTML = null;
   displayMyLibrary();
+  bookNameInput.value = " ";
+  authorNameInput.value = " ";
+  numPagesInput.value = " ";
+  readOrNot.value = " ";
 })
 Book.prototype.toggleStatus = function () {
   if (this.readOrNot = "read") readOrNot = "not read yet";
