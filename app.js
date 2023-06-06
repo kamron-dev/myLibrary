@@ -63,7 +63,10 @@ submitButton.addEventListener("click", () => {
   display.innerHTML = null;
   displayMyLibrary();
 })
-
+Book.prototype.toggleStatus = function () {
+  if (this.readOrNot = "read") readOrNot = "not read yet";
+  if (this.readOrNot = "not read yet") readOrNot = "read";
+}
 
 
 
@@ -73,7 +76,7 @@ const stalker2 = new Book("Stalker 2", "Tarkovsky", 422, "not read yet");
 const survived = new Book("Survived", "Sam Sayonara Simon", 300, "read");
 const survived2 = new Book("Survived2", "Jon Jones", 440, "read");
 
-//myLibrary.push(stalker, stalker2, survived, survived2);
+myLibrary.push(stalker, stalker2, survived, survived2);
 
 displayMyLibrary();
 
