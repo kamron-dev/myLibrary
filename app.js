@@ -51,6 +51,11 @@ function displayMyLibrary() {
       displayMyLibrary();
     })
 
+    // adding read-not read button
+    const readButton = document.createElement("button");
+    readButton.innerHTML = book.readOrNot;
+    newItemDiv.appendChild(readButton);
+
   })
   
 }
