@@ -25,3 +25,10 @@ body {
 .bookCard {
     border: 2px solid pink;
 }
+.deleteBookBtn {
+    height: 2rem;
+    width: 4rem;
+    position: relative;
+    
+    
+}
