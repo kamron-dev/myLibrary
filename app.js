@@ -7,6 +7,8 @@ const authorNameInput = document.querySelector("#authorName");
 const numPagesInput = document.querySelector("#numPages");
 const readOrNot = document.querySelector("#readOrNot");
 const deleteBookBtn = document.querySelector(".deleteBookBtn");
+const showNewBookInputDivBtn = document.getElementById("showNewBookInputDivBtn");
+const bookInputSection = document.getElementById("bookInputSection")
 
 // Initializing display variable
 
@@ -26,6 +28,10 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 
 }
+
+showNewBookInputDivBtn.addEventListener("click", () => {
+  bookInputSection.classList.toggle("isHidden")
+})
 
 
 function displayMyLibrary() {
@@ -95,6 +101,7 @@ const survived = new Book("Survived", "Sam Sayonara Simon", 300, "read");
 const survived2 = new Book("Survived2", "Jon Jones", 440, "read");
 
 myLibrary.push(stalker, stalker2, survived, survived2);
+
 
 displayMyLibrary();
 

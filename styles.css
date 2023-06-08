@@ -1,5 +1,18 @@
 body {
-    box-sizing: border-box;
+    box-sizing: content-box;
+}
+#container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 0.75fr 5fr;
+}
+#body {
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
+#header {
+    grid-row: 1;
 }
 #newBookInputDiv {
     width: 45vw;
@@ -7,16 +20,15 @@ body {
     border: 2px solid red;
     position: absolute;
     left: 345px;
+    z-index: 2;
 
 }
 
+
 #booksDisplay {
-    width: 90vw;
+    width: 100%;
     height: 70vh;
     border: 2px solid blue;
-    position: absolute;
-    top: 95px;
-    left: 55px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     grid-auto-flow: row;
@@ -35,4 +47,7 @@ body {
 .readBookBtn {
     height: 2rem;
     width: 6rem;
+}
+.isHidden {
+    display: none;
 }

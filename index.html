@@ -8,22 +8,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="newBookInputDiv">
-        <label for="bookName">Name of the book:</label>
-        <input type="text" name="bookName" id="bookName">
-        <label for="authorName">Author:</label>
-        <input type="text" name="authorName" id="authorName">
-        <label for="numPages">Number of pages:</label>
-        <input type="tel" name="numPages" id="numPages">
-        <label for="readOrNot">Have you read it yet?</label>
-        <select name="bookState" id="readOrNot">
-            <option value="read">Yes</option>
-            <option value="not read yet">No</option>
-        </select>
-        <button type="submit" id="submitButton">Add book to the library!</button>
-    </div>
-    <div id="booksDisplay">
+    <div id="container">
+        <div id="header">
+            <h1>myLibrary</h1>
+        </div>
+        <div id="body">
+            <button id="showNewBookInputDivBtn">+ Add book</button>
+            <section id="bookInputSection" class="isHidden">
+                <div id="newBookInputDiv">
+                    <label for="bookName">Name of the book:</label>
+                    <input type="text" name="bookName" id="bookName">
+                    <label for="authorName">Author:</label>
+                    <input type="text" name="authorName" id="authorName">
+                    <label for="numPages">Number of pages:</label>
+                    <input type="tel" name="numPages" id="numPages">
+                    <label for="readOrNot">Have you read it yet?</label>
+                    <select name="bookState" id="readOrNot">
+                        <option value="read">Yes</option>
+                        <option value="not read yet">No</option>
+                    </select>
+                    <button type="submit" id="submitButton">Add book to the library!</button>
+                </div>
+            </section>
         
+            <div id="booksDisplay">
+        
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>
