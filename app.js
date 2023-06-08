@@ -18,7 +18,7 @@ function Book(title, author, numPages, readOrNot) {
   this.numPages = numPages;
   this.readOrNot = readOrNot;
   this.info = function () {
-    return `${this.title} by ${this.author}, ${this.numPages} pages, ${this.readOrNot}`
+    return `${this.title} by ${this.author}, ${this.numPages} pages`
   };
 }
 
@@ -51,11 +51,25 @@ function displayMyLibrary() {
       displayMyLibrary();
     })
 
-    // adding read-not read button
+    // adding read not-read button
     const readButton = document.createElement("button");
+    readButton.classList.add("readBookBtn")
     readButton.innerHTML = book.readOrNot;
     newItemDiv.appendChild(readButton);
 
+    //adding functionality to the read button
+    readButton.addEventListener("click", () => {
+      if (book.readOrNot === "read") {
+        myLibrary[index].readOrNot = "not read yet";
+      } else {
+        myLibrary[index].readOrNot = "read";
+      }
+      //if (book.readOrNot === "not read yet") myLibrary[index].readOrNot = "read";
+      readButton.innerHTML = book.readOrNot;
+      console.table(myLibrary);
+  
+    });
+    
   })
   
 }
@@ -72,10 +86,7 @@ submitButton.addEventListener("click", () => {
   numPagesInput.value = " ";
   readOrNot.value = " ";
 })
-Book.prototype.toggleStatus = function () {
-  if (this.readOrNot = "read") readOrNot = "not read yet";
-  if (this.readOrNot = "not read yet") readOrNot = "read";
-}
+
 
 
 
