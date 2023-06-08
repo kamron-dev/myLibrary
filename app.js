@@ -18,7 +18,7 @@ function Book(title, author, numPages, readOrNot) {
   this.numPages = numPages;
   this.readOrNot = readOrNot;
   this.info = function () {
-    return `${this.title} by ${this.author}, ${this.numPages} pages`
+    return `"${this.title}" by ${this.author}, ${this.numPages} pages`
   };
 }
 
@@ -64,7 +64,6 @@ function displayMyLibrary() {
       } else {
         myLibrary[index].readOrNot = "read";
       }
-      //if (book.readOrNot === "not read yet") myLibrary[index].readOrNot = "read";
       readButton.innerHTML = book.readOrNot;
       console.table(myLibrary);
   
