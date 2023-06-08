@@ -65,7 +65,6 @@ function displayMyLibrary() {
         myLibrary[index].readOrNot = "read";
       }
       readButton.innerHTML = book.readOrNot;
-      console.table(myLibrary);
   
     });
     
