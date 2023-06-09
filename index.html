@@ -16,18 +16,15 @@
             <button id="showNewBookInputDivBtn">+ Add book</button>
             <section id="bookInputSection" class="isHidden">
                 <div id="newBookInputDiv">
-                    <label for="bookName">Name of the book:</label>
-                    <input type="text" name="bookName" id="bookName">
-                    <label for="authorName">Author:</label>
-                    <input type="text" name="authorName" id="authorName">
-                    <label for="numPages">Number of pages:</label>
-                    <input type="tel" name="numPages" id="numPages">
-                    <label for="readOrNot">Have you read it yet?</label>
+                    <input type="text" name="bookName" id="bookName" placeholder="Name of book">
+                    <input type="text" name="authorName" id="authorName" placeholder="Author">
+                    <input type="tel" name="numPages" id="numPages" placeholder="Pages">
+                    <label for="readOrNot">Have you read it?</label>
                     <select name="bookState" id="readOrNot">
                         <option value="read">Yes</option>
                         <option value="not read yet">No</option>
                     </select>
-                    <button type="submit" id="submitButton">Add book to the library!</button>
+                    <button type="submit" id="submitButton">Submit!</button>
                 </div>
             </section>
         
