@@ -54,18 +54,20 @@ body {
     background-color: whitesmoke;
     margin: 10px;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 2rem;
 }
-.deleteBookBtn {
-    height: 2rem;
-    width: 4rem;
-    position: relative;
-    
-    
-}
-.readBookBtn {
+.deleteBookBtn, .readBookBtn {
     height: 2rem;
     width: 6rem;
+   align-self: center;
+   
+    
 }
+
 .isHidden {
     display: none;
 }
