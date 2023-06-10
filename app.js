@@ -20,7 +20,7 @@ function Book(title, author, numPages, readOrNot) {
   this.numPages = numPages;
   this.readOrNot = readOrNot;
   this.info = function () {
-    return `"${this.title}" by ${this.author}, ${this.numPages} pages`
+    return `"${this.title}" <br> by ${this.author}, <br> ${this.numPages} pages`
   };
 }
 

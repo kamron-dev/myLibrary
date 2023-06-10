@@ -5,11 +5,12 @@
 body {
     box-sizing: border-box;
 }
+
 #container {
     display: grid;
     
     width: 100vw;
-    grid-template-rows: 0.75fr 5fr;
+    grid-template-rows: 0.6fr 5fr;
 }
 #header {
     grid-row: 1;
@@ -17,7 +18,7 @@ body {
 }
 #body {
     display: grid;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
     background-color: var(--grey)
 }
 #newBookInputDiv {
@@ -31,6 +32,7 @@ body {
     border-radius: 10px;
     left: 41%;
     background-color: whitesmoke;
+    margin-top: 25px;
 }
 #newBookInputDiv > input, select, button {
     margin: 10px 10px;
@@ -61,11 +63,11 @@ body {
     font-size: 2rem;
 }
 .deleteBookBtn, .readBookBtn {
-    height: 2rem;
+    height: 3rem;
     width: 6rem;
-   align-self: center;
-   
-    
+    align-self: center;
+    border: 1px solid whitesmoke;
+
 }
 
 .isHidden {
@@ -73,7 +75,15 @@ body {
 }
 
 #showNewBookInputDivBtn {
-    width: 155px;
-    height: 50px;
+    width: 175px;
+    height: 70px;
     justify-self: center;
+    border: 1px solid var(--grey);
+    
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+#showNewBookInputDivBtn:hover {
+    
+    background-color: rgb(196, 196, 196);;
 }
