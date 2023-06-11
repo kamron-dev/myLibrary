@@ -59,7 +59,7 @@ function displayMyLibrary() {
 
     // adding read not-read button
     const readButton = document.createElement("button");
-    readButton.classList.add("readBookBtn")
+    readButton.classList.add("readBookBtn");
     readButton.innerHTML = book.readOrNot;
     newItemDiv.appendChild(readButton);
 
