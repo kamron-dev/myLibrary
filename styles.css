@@ -71,13 +71,32 @@ h1 {
     justify-content: space-around;
     font-size: 2rem;
 }
-.deleteBookBtn, .readBookBtn {
+.deleteBookBtn {
     height: 4rem;
     width: 12rem;
     align-self: center;
     border: 1px solid whitesmoke;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
+
+}
+.readBookBtn {
+    height: 4rem;
+    width: 12rem;
+    align-self: center;
+    border: 1px solid whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    background-color: rgba(91, 195, 91, 0.855);
+}
+.notReadBtn {
+    height: 4rem;
+    width: 12rem;
+    align-self: center;
+    border: 1px solid whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    background-color: rgba(206, 73, 73, 0.855);
 
 }
 

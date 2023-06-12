@@ -59,7 +59,12 @@ function displayMyLibrary() {
 
     // adding read not-read button
     const readButton = document.createElement("button");
-    readButton.classList.add("readBookBtn");
+    if (book.readOrNot === "read") {
+      readButton.classList.add("readBookBtn");
+    } else if (book.readOrNot === "not read yet") {
+      readButton.classList.add("notReadBtn");
+    }
+    
     readButton.innerHTML = book.readOrNot;
     newItemDiv.appendChild(readButton);
 
@@ -67,8 +72,12 @@ function displayMyLibrary() {
     readButton.addEventListener("click", () => {
       if (book.readOrNot === "read") {
         myLibrary[index].readOrNot = "not read yet";
-      } else {
+        readButton.classList.replace("readBookBtn", "notReadBtn");
+        
+      } else if (book.readOrNot === "not read yet") {
         myLibrary[index].readOrNot = "read";
+        readButton.classList.replace("notReadBtn", "readBookBtn");
+        
       }
       readButton.innerHTML = book.readOrNot;
   
