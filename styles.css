@@ -17,7 +17,7 @@ h1 {
 #container {
     display: grid;
     width: 100vw;
-    grid-template-rows: 0.6fr 5fr;
+    grid-template-rows: 15vh minmax(85vh, 5fr);
 }
 #header {
     grid-row: 1;
