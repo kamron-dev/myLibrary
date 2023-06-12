@@ -78,6 +78,7 @@ h1 {
     border: 1px solid whitesmoke;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
+    border-radius: 15px;
 
 }
 .readBookBtn {
@@ -88,6 +89,7 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     background-color: rgba(91, 195, 91, 0.855);
+    border-radius: 15px;
 }
 .notReadBtn {
     height: 4rem;
@@ -97,7 +99,14 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     background-color: rgba(206, 73, 73, 0.855);
+    border-radius: 15px;
 
+}
+.readBookBtn:hover {
+    background-color: rgba(76, 164, 76, 0.855);
+}
+.notReadBtn:hover {
+    background-color: rgba(165, 58, 58, 0.855);
 }
 
 .isHidden {
